@@ -1,0 +1,19 @@
+<apex:page renderAs="pdf" controller="ContactsController" showHeader="false"  >
+    
+    <apex:form>
+        <apex:pageBlock title="Contacts List" id="contacts_List">
+            <apex:pageBlockSection columns= "2">
+                <apex:repeat value="{!listContacts}" var="ct" >
+                    <apex:pageBlockSectionItem ><p> Name : {!ct.FirstName} {!ct.LastName} <br/>
+                    Address : {!ct.MailingStreet} 
+                            {!ct.MailingCity} {!ct.MailingState}, {!ct.MailingPostalCode}</p>
+
+                    </apex:pageBlockSectionItem> 
+                    <apex:pageBlockSectionItem>
+                        <p>Phone : {!ct.Phone} </p>
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
