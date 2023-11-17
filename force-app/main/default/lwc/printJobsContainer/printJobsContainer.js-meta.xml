@@ -6,7 +6,6 @@
         <target>lightning__AppPage</target>
         <target>lightning__RecordPage</target>
         <target>lightningCommunity__Default</target>
-        <target>lightningCommunity__Page</target>
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightningCommunity__Default">
@@ -14,8 +13,6 @@
             <property name="buttonDescription" type="String" default=""/>
             <property name="buttonLabel" type="String" default=""/>
             <property name="visualForcePage" type="String" default=""/>
-
         </targetConfig>
-        
     </targetConfigs>
 </LightningComponentBundle>
