@@ -1,30 +1,23 @@
 <template>
     <lightning-card title={cardTitle}>
-        <!-- <lightning-layout> -->
-            <!-- <div class="slds-p-around_small"> -->
-                <div class="slds-grid">
-                    <div class="slds-col slds-m-left_medium slds-m-top_xx-small slds-m-right_small">
-                        <p> {buttonDescription} </p>
-                    </div>
-                <div slot="actions">
-                    <div class="slds-col">
-                        <lightning-button variant="brand" 
-                                          disabled={boolShowSpinner} 
-                                          label={buttonLabel} 
-                                          onclick={generatePDF} 
-                                          class="slds-m-right_medium">
-                        </lightning-button>
-                    </div>
-                </div>
+        <div class="slds-grid">
+            <div class="slds-col slds-m-left_medium slds-m-top_xx-small slds-m-right_small">
+                <p> {buttonDescription} </p>
+            </div>
+        <div slot="actions">
+            <div class="slds-col">
+                <lightning-button variant="brand" 
+                                    disabled={boolShowSpinner} 
+                                    label={buttonLabel} 
+                                    onclick={generatePDF} 
+                                    class="slds-m-right_medium">
+                </lightning-button>
+            </div>
+        </div>
 
-                </div>
-                
-                
-                <template if:true={boolShowSpinner}>
-                    <lightning-spinner alternative-text="Retrieving" size="medium"></lightning-spinner>
-                </template>
-                
-            <!-- </div> -->
-        <!-- </lightning-layout> -->
+        </div>
+        <template if:true={boolShowSpinner}>
+            <lightning-spinner alternative-text="Retrieving" size="medium"></lightning-spinner>
+        </template>
     </lightning-card>
 </template>
